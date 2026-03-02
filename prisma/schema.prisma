@@ -17,6 +17,6 @@ model Contact {
   updatedAt      DateTime  @updatedAt
   deletedAt      DateTime?
 
-  linkedContact  Contact?  @relation("ContactLink", fields: [linkedId], references: [id])
-  secondaryContacts Contact[] @relation("ContactLink")
+  linkedContact      Contact?  @relation("ContactLink", fields: [linkedId], references: [id])
+  secondaryContacts  Contact[] @relation("ContactLink")
 }
