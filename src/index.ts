@@ -9,7 +9,13 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.get("/", (req, res) => {
+  res.send(`
+    <h1> Bitespeed Identity Reconciliation Service</h1>
+    <p>Status: Running</p>
+    <p>Use POST /identify to test the API.</p>
+  `);
+});
 app.use("/", identifyRoute);
 
 const PORT = process.env.PORT || 3000;
