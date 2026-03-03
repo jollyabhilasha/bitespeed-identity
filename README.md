@@ -1,6 +1,6 @@
 # Bitespeed Backend Task - Identity Reconciliation
 
-## 📌 Overview
+##  Overview
 
 This project implements the **Identity Reconciliation** service for Bitespeed.
 
@@ -14,7 +14,7 @@ The `/identify` endpoint consolidates contacts by:
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Node.js
 - TypeScript
@@ -47,7 +47,7 @@ Contact table structure:
 
 ---
 
-## 🚀 API Endpoint
+## API Endpoint
 
 ### POST `/identify`
 
@@ -79,7 +79,7 @@ At least one field must be provided.
 
 ---
 
-## 🧠 Logic Summary
+##  Logic Summary
 
 The service performs:
 
@@ -91,45 +91,13 @@ The service performs:
    - Create secondary if new information is introduced
 4. Return consolidated response
 
----
 
-## 🧪 Example
-
-### Request
-
-```json
-{
-  "email": "alpha@gmail.com",
-  "phoneNumber": "555555"
-}
-```
-
-### Response
-
-```json
-{
-  "contact": {
-    "primaryContactId": 9,
-    "emails": [
-      "alpha@gmail.com",
-      "beta@gmail.com"
-    ],
-    "phoneNumbers": [
-      "555555",
-      "666666"
-    ],
-    "secondaryContactIds": [
-      10
-    ]
-  }
-}
-```
 
 ---
 
-## ⚙️ Local Setup Instructions
+##  Local Setup Instructions
 
-### 1️⃣ Clone Repository
+### 1️ Clone Repository
 
 ```bash
 git clone https://github.com/jollyabhilasha/bitespeed-identity
@@ -138,7 +106,7 @@ cd bitespeed-identity
 
 ---
 
-### 2️⃣ Install Dependencies
+### 2️ Install Dependencies
 
 ```bash
 npm install
@@ -146,7 +114,7 @@ npm install
 
 ---
 
-### 3️⃣ Setup MySQL
+### 3️ Setup MySQL
 
 - Install XAMPP
 - Start MySQL
@@ -158,7 +126,7 @@ bitespeed
 
 ---
 
-### 4️⃣ Configure Environment Variables
+### 4️ Configure Environment Variables
 
 Create `.env` file:
 
@@ -190,17 +158,17 @@ http://localhost:3000
 
 ---
 
-## 🌍 Live Deployment
+##  Live Deployment
 
 Live Endpoint:
 
 ```
-https://your-app-name.onrender.com/identify
+https://bitespeed-identity-sf4x.onrender.com/identify
 ```
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -217,7 +185,7 @@ prisma/
 
 ---
 
-## ✅ Edge Cases Covered
+##  Edge Cases Covered
 
 - New contact creation
 - Secondary contact creation
